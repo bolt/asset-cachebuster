@@ -1,4 +1,4 @@
-# Bolt Asset Cachebuster Extensions
+# Bolt Asset Cachebuster Extension
 
 Author: Ivo Valchev
 
