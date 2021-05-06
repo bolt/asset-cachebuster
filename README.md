@@ -1,15 +1,35 @@
-# Acme ReferenceExtension
+# Bolt Asset Cachebuster Extensions
 
-Author: YourNameHere
+Author: Ivo Valchev
 
-This Bolt extension can be used as a starting point to base your own extensions on.
+A Bolt 4/5 extension to bust cache for your assets
 
-Installation:
+## What does it do?
 
-```bash
-composer require acmecorp/reference-extension
+Adds a version cachebuster to your Twig assets.
+
+```twig
+<link rel="stylesheet" href="{{ asset('styles.css') }}" />
 ```
 
+Will output something like:
+
+```html
+<link rel="stylesheet" href="/theme/your-theme/styles.css?v=0feef7" />
+```
+
+The version string is a hashed substring of your `APP_SECRET`.
+Therefore, whenever you need bust the cache, simply run:
+
+```bash
+php bin/console bolt:reset-secret
+```
+
+## Installation
+
+```bash
+composer require bolt/asset-cachebuster
+```
 
 ## Running PHPStan and Easy Codings Standard
 
