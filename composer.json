@@ -1,12 +1,12 @@
 {
-    "name": "acmecorp/reference-extension",
-    "description": "📦 This Bolt extension can be used as a starting point to base your own extensions on.",
+    "name": "bolt/asset-cachebuster",
+    "description": "📦 A Bolt 4/5 extension to bust cache for your assets\n\n",
     "type": "bolt-extension",
     "license": "MIT",
     "authors": [
         {
-            "name": "YourNameHere",
-            "email": "youremail@acme.com"
+            "name": "Ivo Valchev",
+            "email": "me@ivovalchev.com"
         }
     ],
     "require": {
@@ -14,17 +14,17 @@
         "twig/twig": "^2.12 | ^3.0"
     },
     "require-dev": {
-        "bolt/core": "^4.0.0",
+        "bolt/core": "^4.0.0 || ^5.0.0",
         "symplify/easy-coding-standard": "^6.0"
     },
     "autoload": {
         "psr-4": {
-            "AcmeCorp\\ReferenceExtension\\": "src/"
+            "BoltCachebuster\\": "src/"
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
-        "entrypoint": "AcmeCorp\\ReferenceExtension\\Extension"
+        "entrypoint": "BoltCachebuster\\Extension"
     }
 }

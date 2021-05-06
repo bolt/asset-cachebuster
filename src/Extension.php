@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AcmeCorp\ReferenceExtension;
+namespace BoltCachebuster;
 
 use Bolt\Extension\BaseExtension;
 use Symfony\Component\Routing\Route;
@@ -14,24 +14,7 @@ class Extension extends BaseExtension
      */
     public function getName(): string
     {
-        return 'AcmeCorp ReferenceExtension';
-    }
-
-    /**
-     * Add the routes for this extension.
-     *
-     * Note: These are cached by Symfony. If you make modifications to this, run
-     * `bin/console cache:clear` to ensure your routes are parsed.
-     */
-    public function getRoutes(): array
-    {
-        return [
-            'reference' => new Route(
-                '/extensions/reference/{name}',
-                ['_controller' => 'AcmeCorp\ReferenceExtension\Controller::index'],
-                ['name' => '[a-zA-Z0-9]+']
-            ),
-        ];
+        return 'Bolt Assets Cachebuster Extension';
     }
 
     /**
@@ -43,11 +26,6 @@ class Extension extends BaseExtension
      */
     public function initialize($cli = false): void
     {
-        $this->addWidget(new ReferenceWidget());
-
-        $this->addTwigNamespace('reference-extension');
-
-        $this->addListener('kernel.response', [new EventListener(), 'handleEvent']);
     }
 
     /**
