@@ -1,6 +1,9 @@
 # An example of a services.yaml file in an extension
 
 services:
-  _defaults:
+  BoltCachebuster\Twig:
+    autowire: true
+    autoconfigure: true
     bind:
       $secret: '%env(APP_SECRET)%'
+    tags: ['twig.extension']
